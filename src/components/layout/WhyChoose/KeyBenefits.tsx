@@ -5,19 +5,20 @@ import { LuLightbulb, LuCode, LuMegaphone, LuLayoutGrid } from "react-icons/lu";
 function KeyBenefits() {
   const benefitsData = [
     {
-      title: "Product Design UI/UX",
-      description:
-        "A careful balance of beauty and function turns active users into raving fans.",
-      icon: <LuLayoutGrid size={48} />,
-    },
-    {
       title: "Product Strategy",
       description:
         "We streamline, eliminate, focus, and remove all the dead weight with a plan for traction and scalability.",
       icon: <LuLightbulb size={48} />,
     },
     {
-      title: "Software Development",
+      title: "Product Design UI/UX",
+      description:
+        "A careful balance of beauty and function turns active users into raving fans.",
+      icon: <LuLayoutGrid size={48} />,
+    },
+
+    {
+      title: "Product Development",
       description:
         "The magic is in our multi-code-lingual engineers that are so immersed, they dream in code.",
       icon: <LuCode size={48} />,
@@ -54,6 +55,7 @@ function KeyBenefits() {
         {benefitsData.map((benefit, index) => (
           <KeyBenefitsCard
             key={index}
+            index={index + 1}
             title={benefit.title}
             description={benefit.description}
             icon={benefit.icon}
@@ -66,10 +68,10 @@ function KeyBenefits() {
 
 export default KeyBenefits;
 
-function KeyBenefitsCard({ title, description, icon }: any) {
+function KeyBenefitsCard({ title, description, icon, index }: any) {
   return (
     <div className="border border-white/10 rounded-3xl p-5 bg-secondary/5 backdrop-blur-xl flex flex-col gap-2">
-      <h1 className="text-3xl font-bold text-white">01</h1>
+      <h1 className="text-3xl font-bold text-white">0{index}</h1>
       <div className="w-12 h-12 mt-3 text-primary">{icon}</div>
       <h1 className="text-2xl font-bold mt-8 text-white">{title} </h1>
       <p className="text-white/80">{description}</p>

@@ -17,15 +17,12 @@ function AboutTop() {
                 height={15}
                 alt="arrow"
               />
-              <h1 className="text-white">ABOUT AGENCY</h1>
+              <h1 className="text-white">ABOUT US</h1>
             </div>
             <p className="md:text-5xl text-3xl text-white mt-5 lg:text-left text-center">
-              Crafting
-              <span className="text-primary font-semibold">
-                {" "}
-                unique digital{" "}
-              </span>
-              experiences that elevate your brand
+              We help
+              <span className="text-primary font-semibold"> startups </span>
+              with technology and strategic planning.
             </p>
             <Link
               href="/contact"
@@ -54,18 +51,23 @@ function AboutTop() {
             <div className="flex flex-col gap-8">
               <AboutInfo
                 image="/icons/shaps.svg"
-                title="Shaps"
-                description="Shaps is a digital agency that specializes in creating unique digital experiences that elevate your brand. We offer a wide range of services, including ."
+                title="Your Vision, Our Mission"
+                description="Your success is what drives us. At Idealedesigns, we’re not just building apps—we’re bringing your ideas to life. With a deep focus on innovation and quality, we create digital experiences that truly make an impact."
               />
               <AboutInfo
                 image="/icons/shaps.svg"
-                title="Shaps"
-                description="Shaps is a digital agency that specializes in creating unique digital experiences that elevate your brand. We offer a wide range of services, including ."
+                title="Bringing Ideas to Reality"
+                description="Great apps start with great ideas. We blend creativity with technology to build mobile and web solutions that don’t just meet your needs—they help your brand stand out and thrive in the digital world."
               />
               <AboutInfo
                 image="/icons/shaps.svg"
-                title="Shaps"
-                description="Shaps is a digital agency that specializes in creating unique digital experiences that elevate your brand. We offer a wide range of services, including ."
+                title="Building for the Future"
+                description="Technology is always evolving, and so are we. Whether it’s a sleek mobile app or a powerful web platform, we craft solutions that grow with your business and keep your users engaged."
+              />
+              <AboutInfo
+                image="/icons/shaps.svg"
+                title="Helping Brands Stand Out"
+                description="We don’t just build apps; we build brands. Our goal is to help you succeed online with custom strategies, thoughtful design, and high-performance technology. When you grow, we grow—that’s what drives us every day."
               />
             </div>
           </div>

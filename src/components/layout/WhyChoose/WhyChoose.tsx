@@ -1,6 +1,41 @@
 import Image from "next/image";
 
 function WhyChoose() {
+  const whyChooseData = [
+    {
+      title: "Startup-Focused IT Solutions",
+      description:
+        "Tailored services designed to support and scale your startup.",
+    },
+    {
+      title: "Innovative & Cutting-Edge Technology",
+      description:
+        "Stay ahead with the latest digital solutions and IT strategies.",
+    },
+    {
+      title: "Custom & Scalable Solutions",
+      description: "We adapt to your business needs, ensuring seamless growth.",
+    },
+    {
+      title: "Experienced & Dedicated Team",
+      description:
+        "A team of skilled professionals committed to delivering excellence.",
+    },
+    {
+      title: "End-to-End IT Support",
+      description: "From development to deployment, we handle it all.",
+    },
+    {
+      title: "Commitment to Quality & Integrity",
+      description:
+        "We prioritize transparency, reliability, and top-tier service.",
+    },
+    {
+      title: "Customer-Centric Approach",
+      description:
+        "Your vision is our priority; we align our solutions with your goals.",
+    },
+  ];
   return (
     <div className="relative max-w-screen overflow-x-hidden">
       <Image
@@ -23,44 +58,30 @@ function WhyChoose() {
               <h1 className="text-white uppercase">WHY CHOOSE</h1>
             </div>
             <p className="md:text-5xl text-3xl text-white mt-5 lg:text-left text-center">
-              Expertise for
-              <span className="text-primary font-semibold"> your digital </span>
-              growth journey
+              Innovation, Reliability, and Scalable
+              <span className="text-primary font-semibold"> IT Solutions </span>
+              for Your Success.
             </p>
           </div>
           <div className="">
             <p className="font-light mt-12 lg:text-left text-center text-white text-lg">
-              Our dedicated team is committed to understanding your unique
-              needs, ensuring that we provide innovative strategies that drive
-              results. With a focus on quality and integrity.
+              Our dedicated team takes the time to understand your unique needs,
+              delivering innovative strategies that drive real results—all with
+              a commitment to quality and integrity.
             </p>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 mt-20">
-          <div className="flex flex-col gap-4">
+        <div className="grid lg:grid-cols-2 gap-6 mt-20 relative">
+          {/* <div className="flex flex-col gap-4"> */}
+          {whyChooseData.map((item, index) => (
             <WhyChooseCard
-              title="Data-Driven Approach"
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius atque voluptates repellendus fugit dolor."
+              key={index}
+              title={item.title}
+              description={item.description}
             />
-            <WhyChooseCard
-              title="Data-Driven Approach"
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius atque voluptates repellendus fugit dolor."
-            />
-            <WhyChooseCard
-              title="Data-Driven Approach"
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius atque voluptates repellendus fugit dolor."
-            />
-          </div>
-          <div className="">
-            <Image
-              src="/bord.jpg"
-              width={1140}
-              height={1139}
-              alt="arrow"
-              className="w-full lg:h-96 h-60 object-cover rounded-3xl"
-            />
-          </div>
+          ))}
+          {/* </div> */}
         </div>
       </div>
     </div>

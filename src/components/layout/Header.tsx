@@ -8,9 +8,9 @@ function Header() {
   return (
     <div className="w-full h-screen min-h-[800px] bg-[url('/hero-bg.jpg')] bg-cover overflow-hidden bg-no-repeat relative">
       <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
-      <div className="container h-full flex justify-center md:items-start md:mt-10 text-center flex-col relative">
-        <h1 className="lg:text-8xl text-3xl text-white font-light">
-          Innovative solutions for
+      <div className="container h-full flex justify-center md:items-start md:mt-10 md:text-left text-center flex-col relative">
+        <h1 className="lg:text-7xl text-3xl text-white font-light">
+          Collaborating with Startups for
         </h1>
         <h1 className="md:h-24 h-16 md:mt-0 mt-3 lg:text-7xl text-4xl font-extrabold text-primary ">
           <Typing />
@@ -57,10 +57,11 @@ function Header() {
           </div>
           <div className="lg:col-span-2 md:mt-0 mt-10 md:text-left text-center">
             <p className="text-white md:text-xl font-light">
-              At our Creative Digital Agency, we bring your ideas to life by
-              crafting engaging, impactful digital experiences that captivate
-              audiences and drive results. From innovative web design to
-              compelling content and cutting-edge digital strategies.
+              At Ideal e Designs, we empower startups by transforming their
+              ideas into innovative and impactful digital experiences. As your
+              trusted IT partner, we specialize in cutting-edge web development,
+              seamless software solutions, and strategic digital services that
+              drive growth and engagement.
             </p>
           </div>
         </div>

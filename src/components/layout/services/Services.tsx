@@ -2,9 +2,81 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaPhone, FaPhoneAlt, FaPhoneVolume } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
+import { VscInfo } from "react-icons/vsc";
 
 function Services() {
+  const servicesData = [
+    {
+      title: "Strategy & Consulting",
+      list: [
+        "Product Discovery & Research",
+        "MVP Planning & Go-to-Market Strategy",
+        "Business & Revenue Model Consultation",
+        "UI/UX Strategy & User Journey Mapping",
+      ],
+    },
+    {
+      title: "UI/UX Design",
+      list: [
+        "Wireframing & Prototyping",
+        "Mobile App UI/UX Design",
+        "Web App UI/UX Design",
+        "Branding & Visual Identity",
+      ],
+    },
+    {
+      title: "Mobile App Development",
+      list: [
+        "iOS App Development",
+        "Android App Development",
+        "Cross-Platform App Development",
+        "Custom App Development",
+      ],
+    },
+    {
+      title: "Web Development",
+      list: [
+        "Progressive Web Apps (PWA)",
+        "Full-Stack Web Development",
+        "API Development & Integration",
+      ],
+    },
+    {
+      title: "Emerging Tech Solutions",
+      list: [
+        "AI & Machine Learning Integration",
+        "Blockchain & Web3 Development",
+        "AR/VR App Development",
+        "IoT & Wearable App Development",
+      ],
+    },
+    {
+      title: "Quality Assurance & Testing",
+      list: [
+        "Automated & Manual Testing",
+        "Performance & Load Testing",
+        "Security Testing",
+      ],
+    },
+    {
+      title: "Deployment & Maintenance",
+      list: [
+        "App Store Submission (iOS & Android)",
+        "Continuous Monitoring & Support",
+        "Bug Fixes & Performance Optimization",
+      ],
+    },
+    {
+      title: "Growth & Marketing",
+      list: [
+        "ASO (App Store Optimization)",
+        "Analytics & Performance Tracking",
+        "Product Iteration Based on User Feedback",
+      ],
+    },
+  ];
   return (
     <div className="container lg:mt-52 mt-32 relative">
       <div className="w-full grid lg:grid-cols-2 gap-5">
@@ -14,12 +86,9 @@ function Services() {
             <h1 className="text-white uppercase">Our Services</h1>
           </div>
           <p className="md:text-5xl text-3xl text-white mt-5 lg:text-left text-center">
-            Our
-            <span className="text-primary font-semibold">
-              {" "}
-              digital services{" "}
-            </span>
-            to grow your business
+            Empowering
+            <span className="text-primary font-semibold"> startups </span>
+            with our Cutting-Edge Digital Solutions
           </p>
         </div>
         <div className="">
@@ -45,9 +114,26 @@ function Services() {
         </div>
       </div>
       <div className="grid lg:grid-cols-3 gap-10 mt-10">
-        <ServicesItem />
-        <ServicesItem />
-        <ServicesItem />
+        {servicesData.map((service, index) => (
+          <ServicesItem key={index} title={service.title} list={service.list} />
+        ))}
+        <div className="w-full group hover:-mt-3 transition-all  text-center duration-500 h-80 bg-[#14170e]/30 backdrop-blur-3xl border-primary/5 border rounded-3xl p-10 flex flex-col justify-between align-items-center gap-4">
+          <FaPhoneVolume
+            size={50}
+            className="text-primary text-center -rotate-45 mx-auto"
+          />
+
+          <p>
+            Our team will answer all your questions. we ensure a quick response.
+          </p>
+          <Button
+            className="text-secondary rounded-full font-bold mt-4"
+            size="lg"
+          >
+            <FaPhoneAlt className="mr-4" size={16} />
+            Contact Us
+          </Button>
+        </div>
       </div>
       <p className="text-white text-sm text-center mt-14 mb-5">
         Let’s make something great work together.{" "}
@@ -64,9 +150,15 @@ function Services() {
 
 export default Services;
 
-export const ServicesItem = () => {
+export const ServicesItem = ({
+  list,
+  title,
+}: {
+  title: string;
+  list: string[];
+}) => {
   return (
-    <div className="w-full group hover:-mt-3 transition-all duration-500 h-80 bg-[#14170e]/30 backdrop-blur-3xl border-primary/5 border rounded-3xl p-10 flex flex-col justify-between gap-4">
+    <div className="w-full group hover:-mt-3 transition-all duration-500 h-80 bg-[#14170e]/30 backdrop-blur-3xl border-primary/5 border rounded-3xl p-10 flex flex-col justify-start gap-4">
       <div className="flex justify-between items-center">
         <Image alt="" src="/icons/dimand.svg" width={45} height={49} />
         <div className="-rotate-45 group-hover:rotate-0 transition-all group-hover:text-white duration-500">
@@ -74,12 +166,12 @@ export const ServicesItem = () => {
         </div>
       </div>
       <div className="text-white">
-        <h1 className="text-2xl font-bold mb-3">Service Name</h1>
-        <p className="text-sm text-white/90">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          dicta autem aliquam. Assumenda, accusantium nostrum! Ab et nihil
-          asperiores nulla?
-        </p>
+        <h1 className="text-xl font-bold mb-3">{title}</h1>
+        <ul className="text-sm text-white/90 list-disc list-inside flex flex-col gap-2">
+          {list?.map((e, i) => {
+            return <li key={i}>{e}</li>;
+          })}
+        </ul>
       </div>
     </div>
   );

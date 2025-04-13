@@ -7,13 +7,15 @@ function Typing() {
       sequence={[
         // Same substring at the start will only be typed out once, initially
         "Digital World",
-        5000, // wait 1s before replacing "Mice" with "Hamsters"
-        "Art & Design",
-        5000,
-        "Creative Agency",
-        5000,
-        "Social Marketing",
-        5000,
+        1500, // wait 1s before replacing "Mice" with "Hamsters"
+        "IT services",
+        1500, // wait 1s before replacing "Mice" with "Hamsters"
+        "Application Development",
+        1500, // wait 1s before replacing "Mice" with "Hamsters"
+        "Strategic Planning",
+        1500, // wait 1s before replacing "Mice" with "Hamsters"
+        "Product Designing",
+        1500, // wait 1s before replacing "Mice" with "Hamsters"
       ]}
       wrapper="span"
       cursor={false}

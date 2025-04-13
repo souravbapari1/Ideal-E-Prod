@@ -1,6 +1,8 @@
+import { Code, Code2, Laptop2, Server } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { CiGrid41 } from "react-icons/ci";
+import { FaFolderPlus } from "react-icons/fa6";
 import { HiOutlineSquare3Stack3D } from "react-icons/hi2";
 import { PiDatabase } from "react-icons/pi";
 import { SlArrowRightCircle } from "react-icons/sl";
@@ -30,21 +32,33 @@ function HowItsWorks() {
       <div className="grid lg:grid-cols-3 gap-8 mt-14">
         <HowItsWorksCard
           icon={<CiGrid41 size={50} />}
-          title="Discovery"
+          title="Discover"
           step="01"
-          description="Initial consultation to understand your brand, goals, and target audience Conducting research and analysis of market trends."
+          description="First, we listen and simplify your idea to uncover the core value of your app."
         />
         <HowItsWorksCard
           icon={<HiOutlineSquare3Stack3D size={50} />}
-          title="Strategy"
+          title="Design"
           step="02"
-          description="Conducting research and analysis of market trends."
+          description="We craft a streamlined go-to-market strategy that enhances the user experience and maximizes impact."
         />
         <HowItsWorksCard
-          icon={<PiDatabase size={50} />}
-          title="Design"
+          icon={<Code size={50} />}
+          title="Develop"
           step="03"
-          description="Conducting research and analysis of market trends."
+          description="Our expert development team collaborates with our creative minds to deliver precise, high-quality code."
+        />
+        <HowItsWorksCard
+          icon={<Server size={50} />}
+          title="Deploy"
+          step="04"
+          description="We collaborate with you to launch, refine, and achieve true product-market fit."
+        />
+        <HowItsWorksCard
+          icon={<Laptop2 size={50} />}
+          title="Defend"
+          step="05"
+          description="We fortify your app with robust security, ensuring stability, scalability, and long-term success."
         />
       </div>
     </div>

@@ -6,7 +6,7 @@ import Typing from "./_nav/Tyaping";
 import Link from "next/link";
 function Header() {
   return (
-    <div className="w-full h-screen min-h-[800px] bg-[url('/hero-bg.jpg')] bg-cover overflow-hidden bg-no-repeat relative">
+    <div className="w-full h-screen min-h-[800px] max-h-[1000px] bg-[url('/hero-bg.jpg')] bg-cover overflow-hidden bg-no-repeat relative">
       <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black"></div>
       <div className="container h-full flex justify-center md:items-start md:mt-10 md:text-left text-center flex-col relative">
         <h1 className="lg:text-7xl text-3xl text-white font-light">

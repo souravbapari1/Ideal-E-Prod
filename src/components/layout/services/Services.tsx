@@ -6,77 +6,78 @@ import { FaPhone, FaPhoneAlt, FaPhoneVolume } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 import { VscInfo } from "react-icons/vsc";
 
+export const servicesData = [
+  {
+    title: "Strategy & Consulting",
+    list: [
+      "Product Discovery & Research",
+      "MVP Planning & Go-to-Market Strategy",
+      "Business & Revenue Model Consultation",
+      "UI/UX Strategy & User Journey Mapping",
+    ],
+  },
+  {
+    title: "UI/UX Design",
+    list: [
+      "Wireframing & Prototyping",
+      "Mobile App UI/UX Design",
+      "Web App UI/UX Design",
+      "Branding & Visual Identity",
+    ],
+  },
+  {
+    title: "Mobile App Development",
+    list: [
+      "iOS App Development",
+      "Android App Development",
+      "Cross-Platform App Development",
+      "Custom App Development",
+    ],
+  },
+  {
+    title: "Web Development",
+    list: [
+      "Progressive Web Apps (PWA)",
+      "Full-Stack Web Development",
+      "API Development & Integration",
+    ],
+  },
+  {
+    title: "Emerging Tech Solutions",
+    list: [
+      "AI & Machine Learning Integration",
+      "Blockchain & Web3 Development",
+      "AR/VR App Development",
+      "IoT & Wearable App Development",
+    ],
+  },
+  {
+    title: "Quality Assurance & Testing",
+    list: [
+      "Automated & Manual Testing",
+      "Performance & Load Testing",
+      "Security Testing",
+    ],
+  },
+  {
+    title: "Deployment & Maintenance",
+    list: [
+      "App Store Submission (iOS & Android)",
+      "Continuous Monitoring & Support",
+      "Bug Fixes & Performance Optimization",
+    ],
+  },
+  {
+    title: "Growth & Marketing",
+    list: [
+      "ASO (App Store Optimization)",
+      "Analytics & Performance Tracking",
+      "Product Iteration Based on User Feedback",
+    ],
+  },
+];
+
 function Services() {
-  const servicesData = [
-    {
-      title: "Strategy & Consulting",
-      list: [
-        "Product Discovery & Research",
-        "MVP Planning & Go-to-Market Strategy",
-        "Business & Revenue Model Consultation",
-        "UI/UX Strategy & User Journey Mapping",
-      ],
-    },
-    {
-      title: "UI/UX Design",
-      list: [
-        "Wireframing & Prototyping",
-        "Mobile App UI/UX Design",
-        "Web App UI/UX Design",
-        "Branding & Visual Identity",
-      ],
-    },
-    {
-      title: "Mobile App Development",
-      list: [
-        "iOS App Development",
-        "Android App Development",
-        "Cross-Platform App Development",
-        "Custom App Development",
-      ],
-    },
-    {
-      title: "Web Development",
-      list: [
-        "Progressive Web Apps (PWA)",
-        "Full-Stack Web Development",
-        "API Development & Integration",
-      ],
-    },
-    {
-      title: "Emerging Tech Solutions",
-      list: [
-        "AI & Machine Learning Integration",
-        "Blockchain & Web3 Development",
-        "AR/VR App Development",
-        "IoT & Wearable App Development",
-      ],
-    },
-    {
-      title: "Quality Assurance & Testing",
-      list: [
-        "Automated & Manual Testing",
-        "Performance & Load Testing",
-        "Security Testing",
-      ],
-    },
-    {
-      title: "Deployment & Maintenance",
-      list: [
-        "App Store Submission (iOS & Android)",
-        "Continuous Monitoring & Support",
-        "Bug Fixes & Performance Optimization",
-      ],
-    },
-    {
-      title: "Growth & Marketing",
-      list: [
-        "ASO (App Store Optimization)",
-        "Analytics & Performance Tracking",
-        "Product Iteration Based on User Feedback",
-      ],
-    },
-  ];
   return (
     <div className="container lg:mt-52 mt-32 relative">
       <div className="w-full grid lg:grid-cols-2 gap-5">

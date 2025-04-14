@@ -29,14 +29,14 @@ function page() {
               image="/mob1.jpg"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
               title="Mobile App"
-              link="/portfolio"
+              link="/soon"
             />
             <div className="lg:col-span-2">
               <PortfolioCard
                 image="/mob2.jpg"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
                 title="Mobile App"
-                link="/portfolio"
+                link="/soon"
               />
             </div>
             <div className="lg:col-span-2">
@@ -44,27 +44,27 @@ function page() {
                 image="/mob3.jpg"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
                 title="Mobile App"
-                link="/portfolio"
+                link="/soon"
               />
             </div>
             <PortfolioCard
               image="/mob4.jpg"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
               title="Mobile App"
-              link="/portfolio"
+              link="/soon"
             />
             <PortfolioCard
               image="/mob5.jpg"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
               title="Mobile App"
-              link="/portfolio"
+              link="/soon"
             />
             <div className="lg:col-span-2">
               <PortfolioCard
                 image="/mob2.jpg"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
                 title="Mobile App"
-                link="/portfolio"
+                link="/soon"
               />
             </div>
           </div>

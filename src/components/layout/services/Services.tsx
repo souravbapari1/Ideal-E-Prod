@@ -127,13 +127,15 @@ function Services() {
           <p>
             Our team will answer all your questions. we ensure a quick response.
           </p>
-          <Button
-            className="text-secondary rounded-full font-bold mt-4"
-            size="lg"
-          >
-            <FaPhoneAlt className="mr-4" size={16} />
-            Contact Us
-          </Button>
+          <Link href="/contact">
+            <Button
+              className="text-secondary rounded-full font-bold mt-4"
+              size="lg"
+            >
+              <FaPhoneAlt className="mr-4" size={16} />
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
       <p className="text-white text-sm text-center mt-14 mb-5">
@@ -159,7 +161,10 @@ export const ServicesItem = ({
   list: string[];
 }) => {
   return (
-    <div className="w-full group hover:-mt-3 transition-all duration-500 h-80 bg-[#14170e]/30 backdrop-blur-3xl border-primary/5 border rounded-3xl p-10 flex flex-col justify-start gap-4">
+    <Link
+      href="/soon"
+      className="w-full group hover:-mt-3 transition-all duration-500 h-80 bg-[#14170e]/30 backdrop-blur-3xl border-primary/5 border rounded-3xl p-10 flex flex-col justify-start gap-4"
+    >
       <div className="flex justify-between items-center">
         <Image alt="" src="/icons/dimand.svg" width={45} height={49} />
         <div className="-rotate-45 group-hover:rotate-0 transition-all group-hover:text-white duration-500">
@@ -174,6 +179,6 @@ export const ServicesItem = ({
           })}
         </ul>
       </div>
-    </div>
+    </Link>
   );
 };

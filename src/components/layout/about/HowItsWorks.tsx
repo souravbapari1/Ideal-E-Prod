@@ -1,5 +1,6 @@
 import { Code, Code2, Laptop2, Server } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { CiGrid41 } from "react-icons/ci";
 import { FaFolderPlus } from "react-icons/fa6";
@@ -79,7 +80,10 @@ function HowItsWorksCard({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="bg-[#14170e]/30 backdrop-blur-3xl group overflow-hidden border-primary/5 border rounded-3xl w-full h-96 flex flex-col justify-between gap-4 ">
+    <Link
+      href="/soon"
+      className="bg-[#14170e]/30 backdrop-blur-3xl group overflow-hidden border-primary/5 border rounded-3xl w-full h-96 flex flex-col justify-between gap-4 "
+    >
       <div className="w-full flex flex-col">
         <div className="p-8 flex justify-between items-center text-white">
           <h1 className="font-bold text-xl ">{title}</h1>
@@ -98,6 +102,6 @@ function HowItsWorksCard({
           {icon}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

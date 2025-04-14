@@ -70,9 +70,12 @@ export function BlogCard() {
       <h1 className="text-2xl font-bold mt-3 text-white">
         Lorem ipsum dolor sit amet consectetu.
       </h1>
-      <p className="text-primary mt-3 flex justify-start items-center font-bold gap-2 text-sm">
+      <Link
+        href="/soon"
+        className="text-primary mt-3 flex justify-start items-center font-bold gap-2 text-sm"
+      >
         Read More <MdArrowOutward className="mt-1" size={16} />
-      </p>
+      </Link>
     </div>
   );
 }

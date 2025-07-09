@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   experimental: {
     mdxRs: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
 };
 
 const withMDX = require("@next/mdx")({

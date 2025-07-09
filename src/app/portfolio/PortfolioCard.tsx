@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,14 +8,16 @@ function PortfolioCard({
   title,
   description,
   link,
+  className,
 }: {
   image: string;
   title: string;
   description: string;
   link: string;
+  className?: string;
 }) {
   return (
-    <div className="h-[580px] rounded-3xl shadow-lg  relative group overflow-hidden ">
+    <div className={cn("h-[580px] rounded-3xl shadow-lg  relative group overflow-hidden ",className)}>
       <div className="w-[70%] absolute top-5 left-5 flex justify-start items-start gap-2">
         <p className="text-white border px-4 py-1 text-xs font-bold border-white rounded-full z-10">
           Flutter

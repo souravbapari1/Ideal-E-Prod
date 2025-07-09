@@ -5,6 +5,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import "react-multi-carousel/lib/styles.css";
 import Marquee from "react-fast-marquee";
+import { TechImages } from "@/lib/images";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -25,88 +26,7 @@ const responsive = {
   },
 };
 
-const images = [
-  {
-    src: "/tech/android/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/aws/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/digitalOcean/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/docker/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/figma/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/firebase/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/flutter/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/github/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/google-cloud/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/graphql/Dark.svg",
-    className: "h-16",
-  },
-  {
-    src: "/tech/js/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/mongodb/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/nextjs/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/nodejs/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/postfresql/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/python/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/reactjs/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/redis/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/tailwind/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/typescript/Dark.svg",
-    className: " h-16",
-  },
-];
+
 
 function TechSlide() {
   return (
@@ -118,8 +38,8 @@ function TechSlide() {
           infinite={true}
           arrows={false}
         >
-          {images.map((e, index) => (
-            <div className="px-2" key={e.src}>
+          {TechImages.map((e, index) => (
+            <div className="px-1" key={e.src}>
               <div
                 key={index}
                 className="w-full h-20   rounded-xl  flex justify-center items-center bg-white/5  gap-4"
@@ -129,7 +49,7 @@ function TechSlide() {
                   width={400}
                   height={400}
                   alt="arrow"
-                  className={cn("w-full h-10 object-contain", e.className)}
+                  className={cn("w-14 h-10 object-contain", e.className)}
                 />
               </div>
             </div>
@@ -138,7 +58,7 @@ function TechSlide() {
       </div>
       <div className="block lg:hidden max-w-[80vw] overflow-hidden">
         <Marquee>
-          {images.map((e, index) => (
+          {TechImages.map((e, index) => (
             <div className="md:px-2" key={e.src + index}>
               <div
                 key={index}

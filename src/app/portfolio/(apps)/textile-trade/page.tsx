@@ -14,7 +14,7 @@ import { FaPhoneAlt, FaPhoneVolume } from "react-icons/fa";
 import Content from "./content.mdx";
 import { galleryImages, TechImages } from "@/lib/images";
 import Marquee from "react-fast-marquee";
-import PortfolioCard from "../PortfolioCard";
+import PortfolioCard from "../../PortfolioCard";
 
 function page() {
   return (
@@ -30,7 +30,7 @@ function page() {
           <div className="grid lg:grid-cols-6 gap-10 relative">
             <div className="lg:col-span-4 order-2">
               <Image
-                src="/projects/19.png"
+                src="/projects/6.png"
                 alt=""
                 width={1200}
                 height={800}
@@ -58,14 +58,14 @@ function page() {
                 Project <span className="text-primary">Images</span>
               </p>
               <div className="columns-1 lg:columns-2 gap-y-10  space-y-4">
-                {galleryImages.map((e, index) => (
+                {["/projects/textile-trade/1.png", "/projects/textile-trade/2.png", "/projects/textile-trade/3.png"].map((e, index) => (
                   <div key={index} className="break-inside-avoid">
                     <Image
                       src={e}
                       alt=""
                       width={1200}
-                      height={800}
-                      className="w-full rounded-xl"
+                      height={900}
+               className="w-full rounded-2xl h-auto min-h-[296px]"
                     />
                   </div>
                 ))}
@@ -148,7 +148,7 @@ function page() {
                 return (
                   <div className="shrink-0" key={i}>
                     <PortfolioCard
-                      image={`/mob${i + 1}.jpg`}
+                          image={`/mob${i + 1}.jpg`}
                       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
                       title="Mobile App"
                       link="/soon"

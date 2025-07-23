@@ -1,4 +1,150 @@
-"use client";
+const pages = [
+    {
+        name: "oVRcome",
+        image: "/projects/1.png",
+        slug: "ovrcome",
+    },
+    {
+        name: "Bookchoice: boek & luisterboek",
+        image: "/projects/2.png",
+        slug: "bookchoice",
+    },
+    {
+        name: "Yogaraga: Music & Meditation",
+        image: "/projects/3.png",
+        slug: "yogaraga",
+    },
+    {
+        name: "Car Washer App",
+        image: "/projects/4.png",
+        slug: "car-washer-app",
+    },
+    {
+        name: "Medx",
+        image: "/projects/5.png",
+        slug: "medx",
+    },
+    {
+        name: "Textile Trade",
+        image: "/projects/6.png",
+        slug: "textile-trade",
+    },
+    {
+        name: "Valentine Multiplex",
+        image: "/projects/7.png",
+        slug: "valentine-multiplex",
+    },
+    {
+        name: "TechMae: Communities for Women",
+        image: "/projects/8.png",
+        slug: "techmae",
+    },
+    {
+        name: "Imagier en alsacien",
+        image: "/projects/9.png",
+        slug: "imagier-en-alsacien",
+    },
+    {
+        name: "Evoxo Track",
+        image: "/projects/10.png",
+        slug: "evoxo-track",
+    },
+    {
+        name: "Ayan Taxi",
+        image: "/projects/11.png",
+        slug: "ayan-taxi",
+    },
+    {
+        name: "join -social, activity, events",
+        image: "/projects/12.png",
+        slug: "join",
+    }, {
+        name: "Moneylife News & Views",
+        image: "/projects/13.png",
+        slug: "moneylife",
+    },
+    {
+        name: "Shareperks",
+        image: "/projects/14.png",
+        slug: "shareperks",
+    },
+    {
+        name: "ForeAstro",
+        image: "/projects/15.png",
+        slug: "foreastro",
+    },
+    {
+        name: "Audtra—audio social network",
+        image: "/projects/16.png",
+        slug: "audtra",
+    },
+    {
+        name: "Stock Alerts BG(Alarm/Tracker)",
+        image: "/projects/17.png",
+        slug: "stock-alerts-bg",
+    },
+    {
+        name: "WTW - What to Where",
+        image: "/projects/18.png",
+        slug: "wtw",
+    },
+    {
+        name: "Lightkit - Lightroom Effects",
+        image: "/projects/19.png",
+        slug: "lightkit",
+    }
+
+
+]
+const content = `
+<p className="text-4xl py-5 mt-6" > Project <span className="text-primary">Overview</span></p>
+
+Innovative identity design goes beyond just creating a logo — it’s about crafting a unique visual and emotional representation of your brand. We fuse creativity with strategy to develop a cohesive identity that reflects your brand’s personality, values, and mission.
+
+From logos and color schemes to typography and brand guidelines, our designs ensure consistency across all touchpoints, making your brand memorable and instantly recognizable.
+
+With an innovative identity design, you’ll stand out from the competition, connect with your audience, and build lasting brand loyalty. This cohesive identity not only enhances brand recognition but also builds trust and emotional connection across all platforms.
+
+
+
+<p className="text-4xl py-5 mt-6" > Challenges & <span className="text-primary">Constraints</span></p>
+
+To deliver a successful identity transformation, we needed to navigate several key challenges:
+
+- The digital agency landscape is **highly competitive**, requiring strong differentiation.
+- The brand needed **visual consistency** across web, mobile, and print.
+- **Fast turnaround** was expected without sacrificing design quality.
+- The client had a **limited budget**, so we needed to work efficiently.
+- Internal teams required **clear guidelines and scalable assets** for ongoing use.
+<br/>
+
+
+<p className="text-4xl py-5 mt-6" >Project <span className="text-primary">Solution</span></p>
+
+We built a comprehensive brand identity system that addressed all business needs and challenges. Our process followed three key phases:
+
+### 1. **Discovery & Strategy**
+- Stakeholder interviews  
+- Competitive landscape analysis  
+- Brand positioning and tone definition  
+
+### 2. **Design & Development**
+- Logo ideation and refinement  
+- Typography system and scalable spacing  
+- Full-color palette with digital accessibility in mind  
+- UI components and a reusable design system  
+
+### 3. **Implementation**
+- Built brand guidelines in Notion and PDF  
+- Delivered assets via Figma and Zeplin  
+- Worked with dev team on frontend integration  
+- Final QA on brand consistency across all pages  
+<br/>
+`
+
+const createMainPage = ({ mainImage, preview1, preview2, preview3 }: { mainImage: string, preview1: string, preview2: string, preview3: string }) => {
+    return `
+    "use client";
 
 import PageHeader from "@/components/layout/_nav/PageHeader";
 import SliderText from "@/components/layout/_nav/SliderText";
@@ -14,7 +160,7 @@ import { FaPhoneAlt, FaPhoneVolume } from "react-icons/fa";
 import Content from "./content.mdx";
 import { galleryImages, TechImages } from "@/lib/images";
 import Marquee from "react-fast-marquee";
-import PortfolioCard from "../PortfolioCard";
+import PortfolioCard from "../../PortfolioCard";
 
 function page() {
   return (
@@ -30,7 +176,7 @@ function page() {
           <div className="grid lg:grid-cols-6 gap-10 relative">
             <div className="lg:col-span-4 order-2">
               <Image
-                src="/projects/19.png"
+                src="${mainImage}"
                 alt=""
                 width={1200}
                 height={800}
@@ -58,14 +204,14 @@ function page() {
                 Project <span className="text-primary">Images</span>
               </p>
               <div className="columns-1 lg:columns-2 gap-y-10  space-y-4">
-                {galleryImages.map((e, index) => (
+                {["${preview1}", "${preview2}", "${preview3}"].map((e, index) => (
                   <div key={index} className="break-inside-avoid">
                     <Image
                       src={e}
                       alt=""
                       width={1200}
-                      height={800}
-                      className="w-full rounded-xl"
+                      height={900}
+               className="w-full rounded-2xl h-auto min-h-[296px]"
                     />
                   </div>
                 ))}
@@ -148,7 +294,7 @@ function page() {
                 return (
                   <div className="shrink-0" key={i}>
                     <PortfolioCard
-                      image={`/mob${i + 1}.jpg`}
+                          image={\`/mob\${i + 1}.jpg\`}
                       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
                       title="Mobile App"
                       link="/soon"
@@ -168,3 +314,43 @@ function page() {
 }
 
 export default page;
+
+    `
+}
+
+
+
+import * as fs from 'fs';
+import * as path from 'path';
+
+
+const createPages = () => {
+    const pagesDir = path.join(process.cwd(), 'src', 'app', 'portfolio', '(apps)');
+    if (!fs.existsSync(pagesDir)) {
+        fs.mkdirSync(pagesDir, { recursive: true });
+    }
+
+    pages.forEach(page => {
+        const filePath = path.join(pagesDir, page.slug);
+
+        // Ensure the subdirectory exists
+        if (!fs.existsSync(filePath)) {
+            fs.mkdirSync(filePath, { recursive: true });
+        }
+
+        const pageContent = createMainPage({
+            mainImage: page.image,
+            preview1: "/projects/" + page.slug + "/1.png",
+            preview2: "/projects/" + page.slug + "/2.png",
+            preview3: "/projects/" + page.slug + "/3.png"
+        });
+
+        fs.writeFileSync(path.join(filePath, 'page.tsx'), pageContent.trim());
+        fs.writeFileSync(path.join(filePath, 'content.mdx'), content.trim());
+    });
+};
+
+
+createPages();
+console.log("Portfolio pages created successfully.");
+

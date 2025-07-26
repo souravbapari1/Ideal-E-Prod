@@ -15,14 +15,17 @@ function PortfolioCard({
   description: string;
   link: string;
   className?: string;
-}) {
+  }) {
+  
+
+  
   return (
     <div className={cn("h-[580px] rounded-3xl shadow-lg  relative group overflow-hidden ",className)}>
       <div className="w-[70%] absolute top-5 left-5 flex justify-start items-start gap-2">
-        <p className="text-white border px-4 py-1 text-xs font-bold border-white rounded-full z-10">
+        <p className="text-gray-900 bg-white border px-4 py-1 text-xs font-bold border-white rounded-full z-10">
           Flutter
         </p>
-        <p className="text-white border px-4 py-1 text-xs font-bold border-white rounded-full z-10">
+        <p className="text-gray-900 bg-white border px-4 py-1 text-xs font-bold border-white rounded-full z-10">
           Mobile
         </p>
       </div>
@@ -34,8 +37,8 @@ function PortfolioCard({
         alt="arrow"
         className="w-full h-full  object-cover group-hover:scale-110 transition-all duration-500"
       />
-      <div className="absolute bottom-0 transition-all duration-500 group-hover:mb-0 -mb-20 left-0 w-full h-56 bg-gradient-to-b from-primary/10 to-primary/5 backdrop-blur-3xl p-5">
-        <h4 className="text-3xl font-bold mt-1">{title}</h4>
+      <div className="absolute bottom-0 transition-all duration-500 group-hover:mb-0 -mb-20 left-0 w-full h-56 bg-gradient-to-b from-black/30 to-black/10 backdrop-blur-3xl p-5">
+        <h4 className="text-3xl font-bold mt-1 line-clamp-1">{title}</h4>
         <p className="mt-2 text-white/80 pb-1 min-h-16 line-clamp-2">
           {description}
         </p>

@@ -6,8 +6,18 @@ import PortfolioCard from "./PortfolioCard";
 import CallAction from "@/components/layout/CallAction";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
+import { pagesData } from "@/data/pagesdata";
+import { cn } from "@/lib/utils";
 
 function page() {
+  function chunkArray<T>(arr: T[], size: number): T[][] {
+    const result: T[][] = [];
+    for (let i = 0; i < arr.length; i += size) {
+      result.push(arr.slice(i, i + size));
+    }
+    return result;
+  }
+
   return (
     <div>
       <NavBar />
@@ -25,7 +35,20 @@ function page() {
         />
         <div className="container ">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 mt-32">
-            <PortfolioCard
+            {chunkArray(pagesData, 2).map((chunk, index) =>
+              chunk.map((page, i) => (
+                <div className="">
+                  <PortfolioCard
+                    key={page.slug}
+                    image={`/projects/${page.slug}/1.png`}
+                    title={page.name}
+                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
+                    link={`/portfolio/${page.slug}`}
+                  />
+                </div>
+              ))
+            )}
+            {/* <PortfolioCard
               image="/mob1.jpg"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
               title="Mobile App"
@@ -66,7 +89,7 @@ function page() {
                 title="Mobile App"
                 link="/soon"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

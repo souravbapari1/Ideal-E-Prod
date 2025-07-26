@@ -3,6 +3,7 @@
 import PageHeader from "@/components/layout/_nav/PageHeader";
 import SliderText from "@/components/layout/_nav/SliderText";
 import NavBar from "@/components/layout/NavBar";
+import { pagesData } from "@/data/pagesdata";
 
 import CallAction from "@/components/layout/CallAction";
 import Footer from "@/components/layout/Footer";
@@ -142,16 +143,16 @@ function page() {
           </div>
         </div>
         <div className="lg:block hidden">
-          <Marquee pauseOnHover>
+         <Marquee pauseOnHover>
             <div className="flex flex-row gap-5 w-full pr-5">
-              {Array.from({ length: 5 }).map((e, i) => {
+              {pagesData.map((e, i) => {
                 return (
                   <div className="shrink-0" key={i}>
                     <PortfolioCard
-                          image={`/mob${i + 1}.jpg`}
+                      image={`/projects/${e.slug}/1.png`}
                       description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus."
-                      title="Mobile App"
-                      link="/soon"
+                      title={e.name}
+                      link={`/portfolio/${e.slug}`}
                       className="w-96 h-[560px]"
                     />
                   </div>

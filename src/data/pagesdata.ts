@@ -68,11 +68,11 @@ export const pagesData = [
         image: "/projects/14.png",
         slug: "shareperks",
     },
-    {
-        name: "ForeAstro",
-        image: "/projects/15.png",
-        slug: "foreastro",
-    },
+    // {
+    //     name: "ForeAstro",
+    //     image: "/projects/15.png",
+    //     slug: "foreastro",
+    // },
     {
         name: "Audtra—audio social network",
         image: "/projects/16.png",

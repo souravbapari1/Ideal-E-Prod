@@ -7,10 +7,10 @@ export const TechImages = [
     src: "/tech/aws/Dark.svg",
     className: "h-16",
   },
-  {
-    src: "/tech/digitalOcean/Dark.svg",
-    className: "h-16",
-  },
+  // {
+  //   src: "/tech/digitalOcean/Dark.svg",
+  //   className: "h-16",
+  // },
   {
     src: "/tech/docker/Dark.svg",
     className: "h-16",
@@ -19,10 +19,10 @@ export const TechImages = [
     src: "/tech/figma/Dark.svg",
     className: "h-16",
   },
-  {
-    src: "/tech/firebase/Dark.svg",
-    className: "h-16",
-  },
+  // {
+  //   src: "/tech/firebase/Dark.svg",
+  //   className: "h-16",
+  // },
   {
     src: "/tech/flutter/Dark.svg",
     className: "h-16",
@@ -31,18 +31,18 @@ export const TechImages = [
     src: "/tech/github/Dark.svg",
     className: "h-16",
   },
-  {
-    src: "/tech/google-cloud/Dark.svg",
-    className: "h-16",
-  },
+  // {
+  //   src: "/tech/google-cloud/Dark.svg",
+  //   className: "h-16",
+  // },
   {
     src: "/tech/graphql/Dark.svg",
     className: "h-16",
   },
-  {
-    src: "/tech/js/Dark.svg",
-    className: " h-16",
-  },
+  // {
+  //   src: "/tech/js/Dark.svg",
+  //   className: " h-16",
+  // },
   {
     src: "/tech/mongodb/Dark.svg",
     className: " h-16",
@@ -59,26 +59,26 @@ export const TechImages = [
     src: "/tech/postfresql/Dark.svg",
     className: " h-16",
   },
-  {
-    src: "/tech/python/Dark.svg",
-    className: " h-16",
-  },
+  // {
+  //   src: "/tech/python/Dark.svg",
+  //   className: " h-16",
+  // },
   {
     src: "/tech/reactjs/Dark.svg",
     className: " h-16",
   },
-  {
-    src: "/tech/redis/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/tailwind/Dark.svg",
-    className: " h-16",
-  },
-  {
-    src: "/tech/typescript/Dark.svg",
-    className: " h-16",
-  },
+  // {
+  //   src: "/tech/redis/Dark.svg",
+  //   className: " h-16",
+  // },
+  // {
+  //   src: "/tech/tailwind/Dark.svg",
+  //   className: " h-16",
+  // },
+  // {
+  //   src: "/tech/typescript/Dark.svg",
+  //   className: " h-16",
+  // },
 ];
 
 

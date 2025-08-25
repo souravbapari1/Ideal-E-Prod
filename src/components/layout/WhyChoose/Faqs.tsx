@@ -73,13 +73,10 @@ export function FaqCard({
         className=" px-5 py-0 rounded-xl bg-primary/5 backdrop-blur-xl"
       >
         <AccordionTrigger className="text-lg font-semibold">
-          What services does your agency offer?
+          {title ||"Can I be involved in the app development process?"}
         </AccordionTrigger>
         <AccordionContent className="bg-primary/5 rounded-2xl p-4 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-          nisi dolores ex quisquam obcaecati placeat sint cumque. Corporis illo
-          nam labore animi eveniet ea, et rem veritatis quis exercitationem
-          praesentium.
+          {description || "Absolutely! We encourage client involvement at every stage—from initial design concepts to development milestones—to ensure the app aligns perfectly with your vision."}
         </AccordionContent>
       </AccordionItem>
     </Accordion>

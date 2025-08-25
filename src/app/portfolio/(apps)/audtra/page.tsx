@@ -21,9 +21,8 @@ function page() {
   return (
     <div>
       <NavBar />
-      <PageHeader paths={["Portfolio"]} url="Dynamic E-Commerce Platform">
-        Dynamic E-Commerce{" "}
-        <span className="text-primary font-semibold">Platform</span>
+      <PageHeader paths={["Portfolio"]} url="Audtra Platform">
+        Audtra <span className="text-primary font-semibold">Platform</span>
       </PageHeader>
       <SliderText className="md:text-xl md:py-05" />
       <div className="relative">
@@ -59,14 +58,18 @@ function page() {
                 Project <span className="text-primary">Images</span>
               </p>
               <div className="columns-1 lg:columns-2 gap-y-10  space-y-4">
-                {["/projects/audtra/1.png", "/projects/audtra/2.png", "/projects/audtra/3.png"].map((e, index) => (
+                {[
+                  "/projects/audtra/1.png",
+                  "/projects/audtra/2.png",
+                  "/projects/audtra/3.png",
+                ].map((e, index) => (
                   <div key={index} className="break-inside-avoid">
                     <Image
                       src={e}
                       alt=""
                       width={1200}
                       height={900}
-               className="w-full rounded-2xl h-auto min-h-[296px]"
+                      className="w-full rounded-2xl h-auto min-h-[296px]"
                     />
                   </div>
                 ))}
@@ -77,11 +80,14 @@ function page() {
                 today!
               </p>
               <div className="flex flex-col gap-3">
-                <FaqCard />
-                <FaqCard />
-                <FaqCard />
-                <FaqCard />
-                <FaqCard />
+                                <FaqCard title="How long does it typically take to develop a mobile app?" description="Development timelines vary based on the complexity of the app, but typically, a basic app can take 8-12 weeks, while more complex apps may take 4-6 months or longer. We provide detailed timelines after understanding your specific requirements." />
+                <FaqCard title="Do you provide design services, or do I need to provide the app design?" description="We offer comprehensive UI/UX design services to create user-friendly and visually appealing apps. If you already have designs, we can work with those as well." />
+                <FaqCard title="Will you assist with publishing the app on app stores?" description="Yes, we handle the entire app store submission process, including meeting platform guidelines and managing approvals to ensure a smooth launch." />
+                       <FaqCard
+                  title="Can the app handle growth if my user base increases rapidly?"
+                  description="Definitely. We design apps with scalability in mind, ensuring your app’s infrastructure can support growth without compromising performance."
+                />
+                <FaqCard />     
               </div>
             </div>
             <div className="lg:col-span-2 order-1">
@@ -92,17 +98,15 @@ function page() {
                       <p className="text-xl mb-2 font-semibold text-white/90">
                         Project Name
                       </p>
-                      <p className="font-light text-white/80">
-                        Dynamic E-Commerce Platform
-                      </p>
+                      <p className="font-light text-white/80">Audtra</p>
                     </div>
                     <div className="border-b border-white/5 py-5">
                       <p className="text-xl mb-2 font-semibold text-white/90">
                         Category
                       </p>
-                      <p className="font-light text-white/80">Web Design</p>
+                      <p className="font-light text-white/80">Mobile App</p>
                     </div>
-          
+
                     {/* <div className="border-b border-white/5 py-5">
                       <p className="text-xl mb-2 font-semibold text-white/90">
                         Date
@@ -115,7 +119,7 @@ function page() {
                       <p className="text-xl mb-2 font-semibold text-white/90">
                         Duration
                       </p>
-                      <p className="font-light text-white/80">6 Months</p>
+                      <p className="font-light text-white/80">4 Months</p>
                     </div>
                   </div>
                 </div>
@@ -143,7 +147,7 @@ function page() {
           </div>
         </div>
         <div className="lg:block hidden">
-         <Marquee pauseOnHover>
+          <Marquee pauseOnHover>
             <div className="flex flex-row gap-5 w-full pr-5">
               {pagesData.map((e, i) => {
                 return (
